@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <form id="login-form" onsubmit="verify()">
+            
+            <h2>Login</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Name" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <script>
+            function verify() {
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                console.log(username)
+
+                const user = "guruprasath"
+                const pass = "12345"
+
+
+                if (username == user && password == pass) {
+                    alert("login Successful")
+                } else {
+                    alert("login failed")
+                }
+                // You can add your login authentication code here
+            };
+        </script>
+    </div>
+</body>
+
+</html>
